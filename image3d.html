@@ -1,0 +1,16 @@
+<!-- include A-Frame obviously -->
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<!-- include ar.js for A-Frame -->
+<script src="js/aframe-ar-1.5.0.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs>
+    <!-- define your gltf asset -->
+    <a-assets>
+      <a-asset-item id="avocado" src="assets/gltf/Avocado/Avocado.gltf"></a-asset-item>
+    </a-assets>
+    <!-- use your gltf model -->
+    <a-entity gltf-model="#avocado" scale="0.15 0.15 0.15"></a-entity>
+    <!-- define a camera which will move according to the marker position -->
+    <a-marker-camera preset='hiro'></a-marker-camera>
+  </a-scene>
+</body>
