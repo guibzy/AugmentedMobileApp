@@ -1,12 +1,18 @@
-<!-- include A-Frame obviously -->
+<!-- include A-Frame  -->
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-<!-- include ar.js for A-Frame -->
+<!-- include the modified ar.js for A-Frame -->
 <script src="js/aframe-ar-1.5.0.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
+    <!-- Defines an augmented scene -->
     <a-scene embedded arjs>
+
+        <!-- Defines that we want to use the default hiro marker -->
     	<a-marker preset='hiro'>
+              <!-- Defines that we want to project a yellow box for this marker -->
               <a-box position='0 0.5 0' color="#b2903d"></a-box>
     	</a-marker>
+
+        <!-- Defines that we want to use the camera to catch the markers -->
     	<a-entity camera></a-entity>
     </a-scene>
 </body>

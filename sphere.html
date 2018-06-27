@@ -1,12 +1,14 @@
-<!-- include A-Frame obviously -->
+<!-- include A-Frame -->
 <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
-<!-- include ar.js for A-Frame -->
+<!-- include the modified ar.js for A-Frame -->
 <script src="js/aframe-ar-1.5.0.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
+  <!-- Defines an augmented scene -->
   <a-scene embedded arjs>
-    <!-- create your content here. just a box for now -->
+    <!-- create your content here. just a yellow box for now -->
+    <!-- you can specify some opacity for whatever a-entity you use -->
     <a-sphere color="#b2903d" opacity="0.5"></a-sphere>
-    <!-- define a camera which will move according to the marker position -->
+    <!-- Defines a camera which will move according to the marker position of the default marker hiro -->
     <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene>
 </body>
